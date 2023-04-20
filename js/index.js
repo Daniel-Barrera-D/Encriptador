@@ -3,27 +3,48 @@ let salida = document.getElementById('salida');
 
 let texto = document.getElementById('in-texto');
 
-function encriptar(){
-    if(texto.value.trim() != ''){
+let btn1 = document.getElementById('btn-1');
+
+let condicion = /^[a-z0-9]+$/;
+
+function validar() {
+
+    if(texto.value.trim() == ''){
+        swal("ERROR!", "El texto no puede ser vacio", "error");
+    }else if(!condicion.test(texto.value)){
+        swal("ERROR!", "El texto no puede contener mayúsculas, carácteres especiales, ni acentos.", "warning");
+    }
+}
+
+function encriptar() {
+    
+    validar();
+
+    if(texto.value.trim() != '' && condicion.test(texto.value)) {
         salida.style.setProperty("text-align", "justify");
-        salida.innerHTML = `<h2>${texto.value}</h2>`
+        salida.innerHTML = `<textarea class="tsalida" >${texto.value}</textarea>`
         salida.innerHTML += `<button class="btn-3" onclick="copiar()">Copiar</button>`
-    }else{
-        swal("ERROR!", "El texto no puede ser vacio", "error");
     }
+
     texto.value = "";
 }
 
-function desencriptar(){
-    if(texto.value.trim() != ''){
-        salida.innerHTML = `<h2>Aquí se mostrará el texto desencriptado</h2>`
+function desencriptar() {
+    
+    validar();
+
+    if(texto.value.trim() != '' && condicion.test(texto.value)) {
+        salida.style.setProperty("text-align", "justify");
+        salida.innerHTML = `<textarea class="tsalida" >${texto.value}</textarea>`
         salida.innerHTML += `<button class="btn-3" onclick="copiar()">Copiar</button>`
-    }else{
-        swal("ERROR!", "El texto no puede ser vacio", "error");
     }
+
     texto.value = "";
 }
 
-function copiar(){
+function copiar() {
     swal("Hecho", "El texto ha sido copiado correctamente", "success");
 }
+
+
+// console.log(/^[a-z0-9]+$/.test(texto.value));

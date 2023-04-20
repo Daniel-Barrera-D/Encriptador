@@ -119,10 +119,20 @@ html {
  color: #495057;
 }
 
+.tsalida {
+    padding-top: 10px;
+    width: 356px;
+    height: 449px;
+    border: none;
+    resize: none;
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
 .btn-3{
     background-color: rgb(255, 255, 255);
     width: 228px;
-    margin-top: 410px;
+    margin-top: 10px;
     margin-left: 70px;
     padding: 14px;
     color: #0A3871;
@@ -266,6 +276,12 @@ html {
         border-radius: 24px;
     }
 
+    .tsalida {
+        border-radius: 20px;
+        width: 380px;
+        height: 200px;
+    }
+
     .salida>img{
         width: 0.1px;
         visibility: hidden;
@@ -273,7 +289,7 @@ html {
 
     .btn-3 {
         position: relative;
-        top: -240px;
+        top: 10px;
         left: -55px;
         width: 420px;
     }
