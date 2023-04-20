@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="icon" href="/img/icono.ico">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">
+            <a href="https://www.aluracursos.com/" target="_blank"><img src="/img/logo.png" alt="logo-alura"></a>
+        </div>
+
+        <div class="texto">
+
+            <textarea name="texto" id="in-texto" placeholder="Ingrese el texto aquí" autofocus></textarea>
+
+            <div class="advertencia">
+                 <img src="/img/exclamacion.png" alt="signo-exclamación" srcset="">
+                <h5 id="advertencia">Solo letras minúsculas y sin acentos</h5>
+            </div>
+            
+
+            <div class="botones">
+                <button class="btn-1" onclick="encriptar()">Encriptar</button>
+                <button class="btn-2" onclick="desencriptar()">Desencriptar</button>
+            </div>
+
+            <div class="salida" id="salida">
+                <img src="/img/persona.png" alt="persona" srcset="">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <h5>Ingresa el texto que desees encriptar o desincriptar.</h5>
+            </div>
+
+            <div class="footer">
+                <a href="https://github.com/Daniel-Barrera-D" target="_blank"><img src="/img/github.png" alt="icono-github" srcset=""></a>
+                <a href="https://www.linkedin.com/in/daniel-barrera-devia/" target="_blank"><img src="/img/linkedin.png" alt="icono-linkedin" srcset=""></a>
+               <h5 id="dev">Desarrollado por Daniel Barrera Devia</h5>
+           </div>
+        
+
+        </div>
+
+        
+
+    </div>
+
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/js/index.js"></script>
+</html>

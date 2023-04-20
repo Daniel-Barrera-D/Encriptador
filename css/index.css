@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html {
+    background-color: #F3F5FC;
+    padding: 10px 40px 0 84px;
+    height: 760px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.texto {
+    padding: 15px 0 0 90px;
+    height: 650px;
+}
+
+#in-texto {
+    padding-left: 50px;
+    padding-top: 50px;
+    background-color: #F3F5FC;
+    color: #0A3871;
+    width: 680px;
+    height: 488px;
+    
+    resize: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+
+#in-texto::placeholder {
+    padding-left: 5px;
+    color: #0A3871;
+}
+
+.advertencia {
+    display: flex;
+    display: -ms-inline-flexbox;
+    margin-top: 10px;
+    align-items: center;
+    width: max-content;
+    height: 15px;
+    padding: 1px;
+}
+
+#advertencia {
+    color: #495057;
+    font-size: 12px;
+    opacity: 0.6;
+    padding: 0 2px;
+}
+
+.botones {
+    display: flex;
+    margin-top: 10px;
+    gap: 50px;
+    padding: 10px 0 0 0;
+    width: max-content;
+}
+
+.btn-1 {
+    background-color: #0A3871;
+    width: 228px;
+    padding: 14px;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-size: 1rem;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+}
+
+.btn-2 {
+    background-color: #D8DFE8;
+    width: 228px;
+    padding: 14px;
+    color: #0A3871;
+    border: 0.5px solid #0A3871;
+    border-radius: 24px;
+    font-size: 1rem;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+}
+
+.btn-1:hover {
+    background-color: #245da3;
+    cursor: pointer;
+}
+
+.btn-2:hover {
+    background-color: #bec3ca;
+    cursor: pointer;
+}
+
+.btn-1:active {
+    background-color: #0A3871;
+}
+
+.btn-2:active {
+    background-color: #D8DFE8;
+}
+
+.salida {
+    display: flexbox;
+    float: right;
+    background-color: white;
+    width: 350px;
+    height: 410px;
+    text-align: center;
+    align-items: center;
+    padding: 10px 32px 105px 32px;
+    padding-bottom: 125px;
+    /* padding: 123px 32px 105px 32px; */
+    position: relative;
+    top: -645px;
+    left: -80px;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.salida>h5 {
+ color: #495057;
+}
+
+.btn-3{
+    background-color: rgb(255, 255, 255);
+    width: 228px;
+    margin-top: 410px;
+    margin-left: 70px;
+    padding: 14px;
+    color: #0A3871;
+    border: 0.5px solid #0A3871;
+    border-radius: 24px;
+    font-size: 1rem;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+}
+
+.btn-3:hover {
+    background-color: rgb(243, 242, 242);
+    cursor: pointer;
+}
+
+.btn-3:active {
+    background-color: #ffffff;
+}
+
+.footer {
+    display: flex;
+    display: -ms-inline-flexbox;
+    margin-top: 15px;
+    margin-left: 38%;
+    align-items: center;
+    text-align: center;
+    color: black;
+    height: 15px;
+    padding: 1px;
+}
+
+.footer>a>img {
+    /* margin-left: 50%; */
+    width: 16px;
+    padding-left: 5px;
+}
+
+#dev {
+    color: black;
+    font-size: 12px;
+    padding: 0 2px;
+}
+
+.swal-button {
+    background-color: #0A3871;
+}
+
+.swal-button:not([disabled]):hover {
+    background-color: #245da3;
+}
+
+@media (max-width: 768px) {
+
+    .texto {
+        padding-right: 90px;
+    }
+
+    #in-texto {
+        padding-left: 10px;
+        width: 450px;
+    }
+
+    /* .advertencia {
+        position: relative;
+        top: 670px;
+    } */
+
+    .botones {
+        position: relative;
+        left: -15px
+    }
+
+    .salida {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        padding: 4px;
+        top: 15px;
+        left: 40px;
+        border-radius: 24px;
+    }
+
+    .salida>img{
+        width: 0.1px;
+        visibility: hidden;
+    }
+
+    .btn-3 {
+        position: relative;
+        top: -240px;
+        left: -45px;
+        width: 450px;
+    }
+
+    .footer {
+        position: relative;
+        top: 150px;
+        left: -90px;
+    }
+    
+}
+
+@media (max-width: 720px) {
+
+    .texto {
+        position: relative;
+        
+        padding-left: 10px;
+        width: 380px;
+        height: 180px;
+        left: -55px;
+    }
+
+    #in-texto {
+        padding-top: 3px;
+        padding-left: 10px;
+        width: 430px;
+        height: 180px;
+        font-size: 1rem;
+    }
+
+    /* .advertencia {
+        position: relative;
+        top: 670px;
+    } */
+
+    .botones {
+        display: flex;
+        position: relative;
+        left: -25px;
+        gap: 10px;
+    }
+
+    .salida {
+        position: relative;
+        width: 450px;
+        height: 300px;
+        padding: 4px;
+        top: 15px;
+        left: 55px;
+        border-radius: 24px;
+    }
+
+    .salida>img{
+        width: 0.1px;
+        visibility: hidden;
+    }
+
+    .btn-3 {
+        position: relative;
+        top: -240px;
+        left: -55px;
+        width: 420px;
+    }
+
+    .footer {
+        position: relative;
+        width: 300px;
+        top: 150px;
+        left: -70px;
+    }
+    
+}
