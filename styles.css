@@ -126,7 +126,7 @@ html {
     border: none;
     resize: none;
     font-size: 1.5rem;
-    opacity: 0.8;
+    background-color: white;
 }
 
 .btn-3{
