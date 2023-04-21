@@ -7,6 +7,7 @@ let btn1 = document.getElementById('btn-1');
 
 
 
+
 let condicion = /^[a-z0-9\s]+$/;
 
 const codificacion = {
@@ -40,7 +41,7 @@ function encriptar() {
             return codificacion[match];
         });
         salida.innerHTML = `<textarea name="text" class="tsalida" id="out-salida" disabled>${texto2}</textarea>`
-        salida.innerHTML += `<button class="btn-3" onclick="copiar()">Copiar</button>`
+        salida.innerHTML += `<button class="btn-3" onclick="copiar('${texto2}')">Copiar</button>`
     }
 
     texto.value = "";
@@ -53,17 +54,16 @@ function desencriptar() {
     if(texto.value.trim() != '' && condicion.test(texto.value)) {
         salida.style.setProperty("text-align", "justify");
         for(const pro in codificacion) {
-            texto2 = texto2.replaceAll(codificacion[pro],pro);
+            texto.value = texto.value.replaceAll(codificacion[pro],pro);
         }
-        salida.innerHTML = `<textarea name="text" class="tsalida" id="out-salida" disabled>${texto2}</textarea>`
-        salida.innerHTML += `<button class="btn-3" onclick="copiar()">Copiar</button>`
+        salida.innerHTML = `<textarea name="text" class="tsalida" id="out-salida" disabled>${texto.value}</textarea>`
+        salida.innerHTML += `<button class="btn-3" onclick="copiar('${texto.value}')">Copiar</button>`
     }
-
     texto.value = "";
 }
 
-function copiar() {
+function copiar(valor) {
     swal("Hecho", "El texto ha sido copiado correctamente al portapapeles.", "success");
-    navigator.clipboard.writeText(texto2);
-    texto.value= texto2;
+    navigator.clipboard.writeText(valor);
+    texto.value = valor;
 }
